@@ -1,0 +1,130 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inknut Antiqua";
+}
+
+.back-page {
+    display: flex;
+    background: rgb(0, 0, 0);
+    border-color: white;
+    border-width: 2px;
+    margin: 5px;
+    height: 100vh;
+}
+
+.docker-page {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(122, 196, 2, 0);
+}
+
+header {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgba(240, 255, 255, 0);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.685);
+}
+
+header h1 {
+    display: flex;
+    align-self: center;
+    text-transform: uppercase;
+    color: chartreuse;
+    height: fit-content;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 10px;
+    box-shadow: 0 0 25px rgba(202, 202, 202, 0.774);
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(43, 241, 241, 0);
+}
+
+main p {
+    color: chartreuse;
+}
+
+main .text1,
+.text2,
+.text3,
+.text4 {
+    display: flex;
+    justify-content: center;
+    border-radius: 15px;
+    border-left: none;
+    border-right: none;
+    margin: 10px;
+    width: 48%;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.705);
+}
+
+.p-titulo {
+    padding: 5px;
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    height: fit-content;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.801);
+}
+
+main .text1 {}
+
+main .text2 {}
+
+main .text3 {}
+
+main .text4 {}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    height: 40px;
+    background-color: rgba(240, 255, 255, 0);
+    font-size: small;
+    box-shadow: 0 0 15px rgba(202, 202, 202, 0.774);
+}
+
+footer p {
+    z-index: 1;
+    display: flex;
+    align-self: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(202, 202, 202, 0.685);
+    color: chartreuse;
+    -webkit-animation: glow 2s ease-in-out infinite alternate;
+    -moz-animation: glow 2s ease-in-out infinite alternate;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+    from {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #4500e6, 0 0 20px #4500e6, 0 0 25px #4500e6, 0 0 30px #5800e6;
+    }
+    to {
+        text-shadow: 0 0 10px #fff, 0 0 15px #b700ff, 0 0 20px #9900ff, 0 0 25px #9900ff, 0 0 30px #5bbb01;
+    }
+}
