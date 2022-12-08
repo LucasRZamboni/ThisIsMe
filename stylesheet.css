@@ -11,7 +11,7 @@
     border-color: white;
     border-width: 2px;
     margin: 5px;
-    height: 100vh;
+    height: 100%;
 }
 
 .docker-page {
@@ -20,18 +20,19 @@
     flex-direction: column;
     align-content: center;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-color: rgba(122, 196, 2, 0);
 }
 
 header {
-    height: 100px;
+    height: 80px;
     display: flex;
     align-items: center;
     flex-direction: column;
     width: 100%;
     background-color: rgba(240, 255, 255, 0);
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.685);
+    border-radius: 15px;
 }
 
 header h1 {
@@ -43,6 +44,7 @@ header h1 {
     padding-left: 5px;
     padding-right: 5px;
     border-radius: 10px;
+    height: 100%;
     box-shadow: 0 0 25px rgba(202, 202, 202, 0.774);
 }
 
@@ -53,7 +55,7 @@ main {
     justify-content: space-around;
     padding: 10px;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-color: rgba(43, 241, 241, 0);
 }
 
@@ -61,17 +63,16 @@ main p {
     color: chartreuse;
 }
 
-main .text1,
-.text2,
-.text3,
-.text4 {
+main .text {
     display: flex;
     justify-content: center;
+    flex-direction:row;
+    flex-wrap: wrap;
     border-radius: 15px;
     border-left: none;
     border-right: none;
-    margin: 10px;
-    width: 48%;
+   
+    width: 50%;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.705);
 }
 
@@ -79,20 +80,149 @@ main .text1,
     padding: 5px;
     width: 100%;
     justify-content: center;
-    align-content: center;
+    /* align-content: center; */
     text-align: center;
     height: fit-content;
     border-radius: 15px;
     box-shadow: 0 0 25px rgba(255, 255, 255, 0.801);
 }
 
-main .text1 {}
+main .text1 {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
+    padding: 15px;
+    width: 100%;
+    border-radius: 15px;
+}
+.text1 ul{
+    color: #92ff04d8;
+    list-style:circle;
+    list-style-position: outside;
+    width: 100%;
+    padding: 10px;
+}
+.text1 ul li{
+    font-size: 12px;
+}
+.text1 p{
+    font-size: 12px;
+    color: white;
+}
+main .text2 {
+    padding: 20px;
+    font-size: 12px;
+}
+.text2 p{
+    font-size: 12px;
+    color: white;
+}
 
-main .text2 {}
 
-main .text3 {}
+main .text3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    width: 100%;
+}
 
-main .text4 {}
+.text3 div{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 3px white;
+    margin-left: 0;
+    padding: 15px;
+    width: 50%;
+    border-radius: 15px;
+}
+.text3 .title h1{
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    color: #fff;
+    font-size: medium;
+}
+.text3 ul{
+    color: #92ff04d8;
+    list-style:circle;
+    list-style-position: outside;
+    width: 100%;
+    padding: 10px;
+}
+.text3 ul li{
+    font-size: 12px;
+}
+.text3 p{
+    color: white;
+}
+
+main .text4 {
+    display: flex;
+    align-items: left;
+    object-position: center;
+    flex-direction: column;
+    margin-left: 0;
+    padding: 20px;
+    width: 100%;
+    border-radius: 15px;
+}
+.text4 p{
+    font-size: 12px;
+    color: white;
+}
+.visit{
+    display: flex;
+    position: relative;
+    align-self: center;
+    margin: 10px;
+}
+.text4 #links-channels #youtube{
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    margin-right: 10px;
+    box-shadow: 0 0 15px #ffffff;
+    border-radius: 50%;
+    transition: all .2s ease-in-out;
+}
+.text4 #links-channels #twitch{
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    margin-left: 10px;
+    box-shadow: 0 0 15px #ffffff;
+    border-radius: 50%;
+    transition: all .2s ease-in-out;
+}
+.text4 .visit{
+    display: flex;
+    align-items: center;
+    flex-direction: column;    
+    box-shadow: 0 0 15px white;
+    border-radius: 15px;
+    padding: 20px;
+    width: fit-content;
+}
+#links-channels #youtube:hover{
+    z-index: 1;
+    transition: all .2s ease-in-out;
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.623);
+    transform: scale(1.1);
+}
+#links-channels #twitch:hover{
+    z-index: 1;
+    transition: all .2s ease-in-out;
+    box-shadow: 0 0 25px rgba(139, 0, 252, 0.63);
+    transform: scale(1.1);
+}
+#links-channels #youtube:active{
+    transition: all .01s ease-in-out;
+    transform: scale(.95);
+}
+#links-channels #twitch:active{
+    transition: all .01s ease-in-out;
+    transform: scale(.95);
+}
 
 footer {
     display: flex;
@@ -104,6 +234,7 @@ footer {
     background-color: rgba(240, 255, 255, 0);
     font-size: small;
     box-shadow: 0 0 15px rgba(202, 202, 202, 0.774);
+    border-radius: 12px;
 }
 
 footer p {
@@ -113,6 +244,8 @@ footer p {
     padding-left: 5px;
     padding-right: 5px;
     border-radius: 10px;
+    text-align: center;
+    height: 100%;
     box-shadow: 0 0 15px rgba(202, 202, 202, 0.685);
     color: chartreuse;
     -webkit-animation: glow 2s ease-in-out infinite alternate;
