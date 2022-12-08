@@ -5,6 +5,37 @@
     font-family: "Inknut Antiqua";
 }
 
+@media only screen and (max-width: 500px) {
+    #text-config {
+        flex-direction: column;
+        width: 100%;
+    }
+    .text p {
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width: 990px) {
+    main .text .p-titulo {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (min-width: 991px) {
+    main #back-page-config {
+        height: 100vh;
+    }
+    main .text p {
+        font-size: 20px;
+    }
+    main .text2 {
+        width: 100%;
+    }
+    main .text .p-titulo {
+        font-size: 30px;
+    }
+}
+
 .back-page {
     display: flex;
     background: rgb(0, 0, 0);
@@ -66,12 +97,11 @@ main p {
 main .text {
     display: flex;
     justify-content: center;
-    flex-direction:row;
+    flex-direction: row;
     flex-wrap: wrap;
     border-radius: 15px;
     border-left: none;
     border-right: none;
-   
     width: 50%;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.705);
 }
@@ -95,29 +125,33 @@ main .text1 {
     width: 100%;
     border-radius: 15px;
 }
-.text1 ul{
+
+.text1 ul {
     color: #92ff04d8;
-    list-style:circle;
+    list-style: circle;
     list-style-position: outside;
     width: 100%;
     padding: 10px;
 }
-.text1 ul li{
+
+.text1 ul li {
     font-size: 12px;
 }
-.text1 p{
-    font-size: 12px;
-    color: white;
-}
-main .text2 {
-    padding: 20px;
-    font-size: 12px;
-}
-.text2 p{
+
+.text1 p {
     font-size: 12px;
     color: white;
 }
 
+main .text2 {
+    padding: 20px;
+    font-size: 12px;
+}
+
+.text2 p {
+    font-size: 12px;
+    color: white;
+}
 
 main .text3 {
     display: flex;
@@ -126,7 +160,7 @@ main .text3 {
     width: 100%;
 }
 
-.text3 div{
+.text3 div {
     display: flex;
     flex-direction: column;
     box-shadow: 0 0 3px white;
@@ -135,24 +169,28 @@ main .text3 {
     width: 50%;
     border-radius: 15px;
 }
-.text3 .title h1{
+
+.text3 .title h1 {
     display: flex;
     justify-content: center;
     justify-self: center;
     color: #fff;
     font-size: medium;
 }
-.text3 ul{
+
+.text3 ul {
     color: #92ff04d8;
-    list-style:circle;
+    list-style: circle;
     list-style-position: outside;
     width: 100%;
     padding: 10px;
 }
-.text3 ul li{
+
+.text3 ul li {
     font-size: 12px;
 }
-.text3 p{
+
+.text3 p {
     color: white;
 }
 
@@ -166,26 +204,34 @@ main .text4 {
     width: 100%;
     border-radius: 15px;
 }
-.text4 p{
+
+.text4 p {
     font-size: 12px;
     color: white;
 }
-.visit{
+
+.visit {
     display: flex;
     position: relative;
     align-self: center;
     margin: 10px;
 }
-.text4 #links-channels #youtube{
+
+.text4 #links-channels #youtube {
     width: 40px;
     height: 40px;
     margin: 5px;
+    margin-top: 20px;
     margin-right: 10px;
     box-shadow: 0 0 15px #ffffff;
     border-radius: 50%;
     transition: all .2s ease-in-out;
+    -webkit-animation: glowy 2s ease-in-out infinite alternate;
+    -moz-animation: glowy 2s ease-in-out infinite alternate;
+    animation: glowy 2s ease-in-out infinite alternate;
 }
-.text4 #links-channels #twitch{
+
+.text4 #links-channels #twitch {
     width: 40px;
     height: 40px;
     margin: 5px;
@@ -193,33 +239,59 @@ main .text4 {
     box-shadow: 0 0 15px #ffffff;
     border-radius: 50%;
     transition: all .2s ease-in-out;
+    -webkit-animation: glowt 2s ease-in-out infinite alternate;
+    -moz-animation: glowt 2s ease-in-out infinite alternate;
+    animation: glowt 2s ease-in-out infinite alternate;
 }
-.text4 .visit{
+
+.text4 .visit {
     display: flex;
     align-items: center;
-    flex-direction: column;    
+    flex-direction: column;
     box-shadow: 0 0 15px white;
     border-radius: 15px;
     padding: 20px;
     width: fit-content;
 }
-#links-channels #youtube:hover{
+
+@-webkit-keyframes glowy {
+    from {
+        box-shadow: 0 0 5px rgb(255, 0, 0), 0 0 10px rgb(212, 39, 39), 0 0 15px #c24e4e, 0 0 20px #be4f4f, 0 0 25px #c7b4b4, 0 0 30px #ff0000;
+    }
+    to {
+        box-shadow: 0 0 10px rgb(255, 255, 255), 0 0 15px #bd7d7d, 0 0 20px #c44545, 0 0 25px #bd1919, 0 0 30px #ff0000;
+    }
+}
+
+@-webkit-keyframes glowt {
+    from {
+        box-shadow: 0 0 5px rgb(98, 0, 255), 0 0 10px rgb(105, 39, 212), 0 0 15px #7a4ec2, 0 0 20px #764fbe, 0 0 25px #beb4c7, 0 0 30px #6f00ff;
+    }
+    to {
+        box-shadow: 0 0 10px rgb(255, 255, 255), 0 0 15px #997dbd, 0 0 20px #7c45c4, 0 0 25px #6319bd, 0 0 30px #6200ff;
+    }
+}
+
+#links-channels #youtube:hover {
     z-index: 1;
     transition: all .2s ease-in-out;
     box-shadow: 0 0 25px rgba(255, 0, 0, 0.623);
     transform: scale(1.1);
 }
-#links-channels #twitch:hover{
+
+#links-channels #twitch:hover {
     z-index: 1;
     transition: all .2s ease-in-out;
     box-shadow: 0 0 25px rgba(139, 0, 252, 0.63);
     transform: scale(1.1);
 }
-#links-channels #youtube:active{
+
+#links-channels #youtube:active {
     transition: all .01s ease-in-out;
     transform: scale(.95);
 }
-#links-channels #twitch:active{
+
+#links-channels #twitch:active {
     transition: all .01s ease-in-out;
     transform: scale(.95);
 }
